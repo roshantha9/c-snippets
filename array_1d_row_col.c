@@ -1,8 +1,5 @@
 /******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
+1D array addressing row/col-wise, but with start offset
 
 *******************************************************************************/
 
@@ -28,31 +25,19 @@ int main()
     
     int temp_byte;
     
-    int x,y;
-    
-    
+    int x,y;   
     int s,e;
     s=2; e=4;
     
-    ptr = backup_ptr + (s*COL);
-    
-    
+    ptr = backup_ptr + (s*COL); // add start offset
+      
     for (int y=s; y<e; y++){
         for (int x=0; x<COL; x++){
-            
-            
-            
-            temp_byte = *ptr++;
-            
-            
-            
-            
-            
+            temp_byte = *ptr++;            
             printf("%i \t", temp_byte);
         }
         printf("\n");
     }
     
-
     return 0;
 }
